@@ -17,7 +17,7 @@
   "use strict";
 
   // const SUPABASE_URL = "https://dwjwbqovfxsemlnzdcye.supabase.co";
-  const SUPABASE_URL = "https://okcassfhueoykmikxwym.supabase.co/rest/v1/";
+  const SUPABASE_URL = "https://okcassfhueoykmikxwym.supabase.co";
   // const SUPABASE_ANON_KEY = "sb_publishable_QrysqcQ6IBgvOlXgDo6kxw_h6AeJQYi";
   const SUPABASE_ANON_KEY = "sb_publishable_6rrA29hi-qZ6n_XaIazoNQ_HwBcZDDS";
 
