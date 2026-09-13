@@ -317,7 +317,7 @@
       localStorage.setItem("pyweblib-bind", JSON.stringify({ id: p.id, title: p.title, author_id: p.author_id, published: p.published }));
     } catch (e) {}
     // Community lives at /community/, the Playground one level up.
-    window.location.href = "PyWebLib";
+    window.location.href = "";
   }
 
   // ---- Detail modal with comments ----
