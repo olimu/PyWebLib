@@ -206,7 +206,7 @@
       card.className = "community-card" + (isDraft ? " is-draft" : "");
       card._p = p;
       card.innerHTML =
-        '<a class="cc-thumb-wrap" href="PyWebLib/game/?id=' + encodeURIComponent(p.id) + '"><canvas class="cc-thumb" width="320" height="180"></canvas></a>' +
+        '<a class="cc-thumb-wrap" href="game/?id=' + encodeURIComponent(p.id) + '"><canvas class="cc-thumb" width="320" height="180"></canvas></a>' +
         '<div class="cc-head">' +
           '<span class="cc-kind cc-kind-' + esc(p.kind) + '">' + esc(p.kind) + "</span>" +
           (isDraft ? '<span class="cc-kind cc-draft" title="Only you can see this">Draft</span>' : "") +
@@ -234,7 +234,7 @@
       card.querySelector('[data-act="play"]').addEventListener("click", function () {
         // Games deserve the full page: leaderboard, comments, big stage. Turtle
         // and plain-Python programs run inline in a quick popup.
-        if (p.kind === "game") { window.location.href = "PyWebLib/game/?id=" + encodeURIComponent(p.id); return; }
+        if (p.kind === "game") { window.location.href = "game/?id=" + encodeURIComponent(p.id); return; }
         // 3D needs the Playground's WebGL stage: neither the popup player nor the
         // game page has one, so they would just show an empty box.
         if (p.kind === "game3d") { openInPlayground(p); return; }
