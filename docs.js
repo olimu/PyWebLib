@@ -403,6 +403,16 @@
     chip.href = "#sec-" + sec.id;
     chip.textContent = sec.name;
     chip.dataset.fam = fam;
+    chip.addEventListener("click", function (e) {
+      e.preventDefault();
+      var target = document.getElementById("sec-" + sec.id);
+      if (!target) return;
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+      history.replaceState(null, "", "#" + target.id);
+    });
     jump.appendChild(chip);
 
     var wrap = el("section", "docs-section");
