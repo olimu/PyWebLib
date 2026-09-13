@@ -7,6 +7,7 @@
   <meta name="description" content="Browse Python programs shared by the PyWebLib community: turtle drawings, browser games and more. Upvote your favourites and open any one in the Playground." />
   <meta name="color-scheme" content="light dark" />
   <meta name="theme-color" content="#4f46e5" />
+  <base href="/PyWebLib/">
   <!-- Inline and blocking on purpose. The theme has to be on <html> before the
        stylesheet paints, or a dark-mode visitor gets a white flash on every
        single page load. Anything loaded with the other scripts is far too late.
@@ -20,38 +21,38 @@
       document.documentElement.setAttribute("data-theme", t);
     } catch (e) {}
   </script>
-  <link rel="icon" href="/favicon.ico" sizes="any" />
-  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png?v=3" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=3" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=3" />
-  <link rel="manifest" href="/site.webmanifest" />
-  <link rel="stylesheet" href="../styles.css" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon-96.png?v=3" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg?v=3" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=3" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
 
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="/" class="logo">
+      <a href="" class="logo">
         <img class="logo-mark" src="/favicon.svg?v=3" alt="" width="32" height="32" />
         <span>PyWebLib</span>
       </a>
       <nav class="site-nav" aria-label="Primary">
-        <a class="header-link" href="/">Playground</a>
+        <a class="header-link" href="">Playground</a>
         <div class="nav-dd">
-          <a class="header-link active" href="/community/">Community<svg class="nav-caret" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a class="header-link active" href="community/">Community<svg class="nav-caret" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <div class="nav-dd-menu">
-            <a href="/assets/">Assets</a>
-            <a href="/leaderboard/">Leaderboard</a>
+            <a href="assets/">Assets</a>
+            <a href="leaderboard/">Leaderboard</a>
           </div>
         </div>
         <div class="nav-dd">
-          <a class="header-link" href="/about/">About<svg class="nav-caret" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a class="header-link" href="about/">About<svg class="nav-caret" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <div class="nav-dd-menu">
-            <a href="/docs/">Docs</a>
-            <a href="/docs/guide/">Guide</a>
-            <a href="/docs/turtle/">Turtle guide</a>
-            <a href="/docs/game/">Game guide</a>
-            <a href="/docs/net/">Multiplayer guide</a>
+            <a href="docs/">Docs</a>
+            <a href="docs/guide/">Guide</a>
+            <a href="docs/turtle/">Turtle guide</a>
+            <a href="docs/game/">Game guide</a>
+            <a href="docs/net/">Multiplayer guide</a>
           </div>
         </div>
         <span id="pwl-account" class="pwl-account" data-root="../"></span>
@@ -66,7 +67,7 @@
           <summary class="hero-tuck-btn" title="What is this page?" aria-label="What is this page?">?</summary>
           <p class="eyebrow">Made by the community</p>
           <h1>Community</h1>
-          <p class="lead">Programs people have shared: turtle art, browser games and more. Upvote the ones you like, open any in the <a href="../">Playground</a> to tinker, or share your own.</p>
+          <p class="lead">Programs people have shared: turtle art, browser games and more. Upvote the ones you like, open any in the <a href="">Playground</a> to tinker, or share your own.</p>
         </details>
       </div>
     </section>
@@ -78,7 +79,7 @@
           <button class="community-tab" data-sort="new" role="tab">New</button>
           <button class="community-tab" data-sort="top" role="tab">Top</button>
         </div>
-        <a class="btn btn-primary" href="../">Share your own <svg class="btn-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h9M8 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="btn btn-primary" href="">Share your own <svg class="btn-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h9M8 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
 
       <p class="community-notice" id="community-notice" hidden>
@@ -95,20 +96,20 @@
     <div class="container">
       <p>PyWebLib: real Python in your browser, powered by
         <a href="https://pyodide.org" target="_blank" rel="noopener">Pyodide</a>. MIT licensed.
-        &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a></p>
+        &middot; <a href="privacy/">Privacy</a> &middot; <a href="terms/">Terms</a></p>
     </div>
   </footer>
 
-  <script src="../theme.js"></script>
+  <script src="theme.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
-  <script src="../supabase-config.js"></script>
-  <script src="../auth.js"></script>
-  <script src="../sprites.js"></script>
-  <script src="../preview.js"></script>
-  <script src="../runtime/pyrun-proto.js"></script>
-  <script src="../pyrun.js"></script>
-  <script src="../player.js"></script>
-  <script src="../community.js"></script>
+  <script src="supabase-config.js"></script>
+  <script src="auth.js"></script>
+  <script src="sprites.js"></script>
+  <script src="preview.js"></script>
+  <script src="runtime/pyrun-proto.js"></script>
+  <script src="pyrun.js"></script>
+  <script src="player.js"></script>
+  <script src="community.js"></script>
 
 </body>
 </html>
