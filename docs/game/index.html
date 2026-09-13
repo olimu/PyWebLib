@@ -26,14 +26,14 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg?v=3" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png?v=3" />
   <link rel="manifest" href="site.webmanifest" />
-  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="styles.css" />
 
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="/" class="logo">
-        <img class="logo-mark" src="/favicon.svg?v=3" alt="" width="32" height="32" />
+      <a href="" class="logo">
+        <img class="logo-mark" src="favicon.svg?v=3" alt="" width="32" height="32" />
         <span>PyWebLib</span>
       </a>
       <nav class="site-nav" aria-label="Primary">
@@ -55,7 +55,7 @@
             <a href="docs/net/">Multiplayer guide</a>
           </div>
         </div>
-        <span id="pwl-account" class="pwl-account" data-root="../"></span>
+        <span id="pwl-account" class="pwl-account" data-root=""></span>
       </nav>
     </div>
   </header>
@@ -65,7 +65,7 @@
       <div class="container">
         <p class="eyebrow">Docs &middot; Guide</p>
         <h1>The game library</h1>
-        <p class="lead">Type <code>import game</code> in the <a href="../">Playground</a> and make a game right in the browser: sprites, the keyboard, the mouse, collisions and a score, no install. This is the hands-on how-to; the one-line reference for every call is on the <a href="#sec-game">Docs page</a>. Every example here has a <strong>Try it</strong> button that drops it into the Playground.</p>
+        <p class="lead">Type <code>import game</code> in the <a href="">Playground</a> and make a game right in the browser: sprites, the keyboard, the mouse, collisions and a score, no install. This is the hands-on how-to; the one-line reference for every call is on the <a href="docs/#sec-game">Docs page</a>. Every example here has a <strong>Try it</strong> button that drops it into the Playground.</p>
       </div>
     </section>
 
@@ -73,18 +73,18 @@
       <article class="guide">
 
         <nav class="guide-jump" aria-label="On this page">
-          <a href="#shape">The shape of a game</a>
-          <a href="#sprites">Built-in sprites</a>
-          <a href="#move">Moving</a>
-          <a href="#collide">Collisions</a>
-          <a href="#mouse">The mouse</a>
-          <a href="#type">Text boxes &amp; buttons</a>
-          <a href="#spin">Spin &amp; mirror</a>
-          <a href="#box">Boxes &amp; score</a>
-          <a href="#over">Ending a game</a>
-          <a href="#sound">Sound</a>
-          <a href="#ink">Drawing that stays</a>
-          <a href="#limits">What it can do</a>
+          <a href="docs/#shape">The shape of a game</a>
+          <a href="docs/#sprites">Built-in sprites</a>
+          <a href="docs/#move">Moving</a>
+          <a href="docs/#collide">Collisions</a>
+          <a href="docs/#mouse">The mouse</a>
+          <a href="docs/#type">Text boxes &amp; buttons</a>
+          <a href="docs/#spin">Spin &amp; mirror</a>
+          <a href="docs/#box">Boxes &amp; score</a>
+          <a href="docs/#over">Ending a game</a>
+          <a href="docs/#sound">Sound</a>
+          <a href="docs/#ink">Drawing that stays</a>
+          <a href="docs/#limits">What it can do</a>
         </nav>
 
         <section id="shape">
@@ -193,7 +193,7 @@ while game.playing():
         line.content = "you said: " + said
     game.frame()</pre>
           <p><button type="button" class="btn btn-primary" data-load="ex-type">Try it in the Playground <svg class="btn-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h9M8 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></p>
-          <p class="callout"><strong>On a phone,</strong> the keyboard may only pop up once the player <em>taps</em> the box, so leave it where a thumb can reach it. Enter sends the line; a <code>game.button(..., submits=box)</code> gives them a Send button to tap instead. Pair this with <a href="../net/">multiplayer</a> and a shared list to build a chat room in a few lines.</p>
+          <p class="callout"><strong>On a phone,</strong> the keyboard may only pop up once the player <em>taps</em> the box, so leave it where a thumb can reach it. Enter sends the line; a <code>game.button(..., submits=box)</code> gives them a Send button to tap instead. Pair this with <a href="docs/net/">multiplayer</a> and a shared list to build a chat room in a few lines.</p>
         </section>
 
         <section id="spin">
@@ -237,7 +237,7 @@ while game.playing():
           <p><code>game.game_over(message)</code> shows a big banner and stops the loop:</p>
           <pre class="guide-code language-python">if misses >= 3:
     game.game_over("Game over! Score: " + str(game.score()))</pre>
-          <p class="callout"><strong>Leaderboards with <code>game.submit_score(points)</code>:</strong> call it whenever the score changes (or at game over) and, once you publish the game, its shared page gets a <strong>per-game leaderboard</strong>, the best score for each signed-in player who plays it there. In the Playground it quietly does nothing, so it is safe to leave in. This is separate from the site <a href="../leaderboard/">Leaderboard</a>, which ranks <em>creators</em> by the upvotes on the programs they share.</p>
+          <p class="callout"><strong>Leaderboards with <code>game.submit_score(points)</code>:</strong> call it whenever the score changes (or at game over) and, once you publish the game, its shared page gets a <strong>per-game leaderboard</strong>, the best score for each signed-in player who plays it there. In the Playground it quietly does nothing, so it is safe to leave in. This is separate from the site <a href="leaderboard/">Leaderboard</a>, which ranks <em>creators</em> by the upvotes on the programs they share.</p>
           <pre class="guide-code language-python">game.submit_score(score)
 game.game_over("Score: " + str(score))</pre>
         </section>
@@ -327,8 +327,8 @@ while game.playing():
             <li><strong>Not built for:</strong> gravity and physics engines, loading your own image or sound files (the built-in <code>game.sound()</code> beeps aside). Those are what a full engine like pygame adds.</li>
           </ul>
           <p class="callout"><strong>Coordinates.</strong> The top-left corner is <code>(0, 0)</code>. <code>x</code> grows to the <em>right</em> and <code>y</code> grows <em>downward</em>, so a bigger <code>y</code> is further <em>down</em> the screen. That catches everyone out at first.</p>
-          <p>Now open the <a href="../">Playground</a>, type <code>import game</code>, and build something. Load the "Game" example cards, change a number, and see what happens.</p>
-          <p><a href="../" class="btn btn-primary">Open the Playground <svg class="btn-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h9M8 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a> <a href="../#sec-game" class="btn btn-ghost">Full call reference</a></p>
+          <p>Now open the <a href="">Playground</a>, type <code>import game</code>, and build something. Load the "Game" example cards, change a number, and see what happens.</p>
+          <p><a href=" class="btn btn-primary">Open the Playground <svg class="btn-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h9M8 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a> <a href="docs/#sec-game" class="btn btn-ghost">Full call reference</a></p>
         </section>
 
       </article>
@@ -343,13 +343,13 @@ while game.playing():
     </div>
   </footer>
 
-  <script src="../theme.js"></script>
+  <script src="theme.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
-  <script src="../supabase-config.js"></script>
-  <script src="../auth.js"></script>
-  <script src="../sprites.js"></script>
+  <script src="supabase-config.js"></script>
+  <script src="auth.js"></script>
+  <script src="sprites.js"></script>
   <!-- Carry a code example over to the Playground: stash it, then navigate. -->
   <script>
     (function () {
@@ -361,7 +361,7 @@ while game.playing():
         try {
           localStorage.setItem("pyweblib-load", pre.textContent.replace(/\s+$/, ""));
         } catch (err) { /* private mode: just navigate */ }
-        location.href = "../";
+        location.href = "";
       });
     })();
   </script>
