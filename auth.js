@@ -92,8 +92,8 @@
                '<span class="pwl-acct-name">' + esc(displayName()) + '</span>' +
              '</button>' +
              '<div class="pwl-acct-menu" role="menu">' +
-               '<a class="pwl-acct-item" href="/community/?mine=1" role="menuitem">My programs</a>' +
-               '<a class="pwl-acct-item" href="/settings/" role="menuitem">Settings</a>' +
+               '<a class="pwl-acct-item" href="community/?mine=1" role="menuitem">My programs</a>' +
+               '<a class="pwl-acct-item" href="settings/" role="menuitem">Settings</a>' +
                rename +
                '<button type="button" class="pwl-acct-item" data-pwl="signout" role="menuitem">Sign out</button>' +
              '</div>' +
