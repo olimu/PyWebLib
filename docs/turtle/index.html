@@ -7,6 +7,7 @@
   <meta name="description" content="A hands-on guide to turtle drawing in PyWebLib: a pen that walks, turning, pen colours, loops that make patterns, filling shapes, going anywhere, and every example runnable in the Playground." />
   <meta name="color-scheme" content="light dark" />
   <meta name="theme-color" content="#4f46e5" />
+  <base href="/PyWebLib/">
   <!-- Inline and blocking on purpose. The theme has to be on <html> before the
        stylesheet paints, or a dark-mode visitor gets a white flash on every
        single page load. Anything loaded with the other scripts is far too late.
@@ -20,41 +21,41 @@
       document.documentElement.setAttribute("data-theme", t);
     } catch (e) {}
   </script>
-  <link rel="icon" href="/favicon.ico" sizes="any" />
-  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png?v=3" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=3" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=3" />
-  <link rel="manifest" href="/site.webmanifest" />
-  <link rel="stylesheet" href="../../styles.css" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon-96.png?v=3" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg?v=3" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=3" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
 
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="/" class="logo">
-        <img class="logo-mark" src="/favicon.svg?v=3" alt="" width="32" height="32" />
+      <a href="" class="logo">
+        <img class="logo-mark" src="favicon.svg?v=3" alt="" width="32" height="32" />
         <span>PyWebLib</span>
       </a>
       <nav class="site-nav" aria-label="Primary">
-        <a class="header-link" href="/">Playground</a>
+        <a class="header-link" href="">Playground</a>
         <div class="nav-dd">
-          <a class="header-link" href="/community/">Community<svg class="nav-caret" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a class="header-link" href="community/">Community<svg class="nav-caret" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <div class="nav-dd-menu">
-            <a href="/assets/">Assets</a>
-            <a href="/leaderboard/">Leaderboard</a>
+            <a href="assets/">Assets</a>
+            <a href="leaderboard/">Leaderboard</a>
           </div>
         </div>
         <div class="nav-dd">
-          <a class="header-link active" href="/about/">About<svg class="nav-caret" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a class="header-link active" href="about/">About<svg class="nav-caret" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <div class="nav-dd-menu">
-            <a href="/docs/">Docs</a>
-            <a href="/docs/guide/">Guide</a>
+            <a href="docs/">Docs</a>
+            <a href="docs/guide/">Guide</a>
             <a class="active" href="/docs/turtle/">Turtle guide</a>
-            <a href="/docs/game/">Game guide</a>
-            <a href="/docs/net/">Multiplayer guide</a>
+            <a href="docs/game/">Game guide</a>
+            <a href="docs/net/">Multiplayer guide</a>
           </div>
         </div>
-        <span id="pwl-account" class="pwl-account" data-root="../../"></span>
+        <span id="pwl-account" class="pwl-account" data-root=""></span>
       </nav>
     </div>
   </header>
@@ -64,7 +65,7 @@
       <div class="container">
         <p class="eyebrow">Docs &middot; Guide</p>
         <h1>The turtle library</h1>
-        <p class="lead">Type <code>import turtle</code> in the <a href="../../">Playground</a> and you get a little pen that walks around a window, drawing a line behind it. Tell it to go forward, turn, change colour, and lift the pen, and you can draw anything from a square to a rainbow spiral. This is the hands-on how-to; the one-line reference for every call is on the <a href="../#sec-turtle">Docs page</a>. Every example has a <strong>Try it</strong> button that drops it into the Playground.</p>
+        <p class="lead">Type <code>import turtle</code> in the <a href="">Playground</a> and you get a little pen that walks around a window, drawing a line behind it. Tell it to go forward, turn, change colour, and lift the pen, and you can draw anything from a square to a rainbow spiral. This is the hands-on how-to; the one-line reference for every call is on the <a href="docs/#sec-turtle">Docs page</a>. Every example has a <strong>Try it</strong> button that drops it into the Playground.</p>
       </div>
     </section>
 
@@ -174,8 +175,8 @@ turtle.forward(120)</pre>
             <li><code>turtle.clear()</code> wipes the drawing but leaves the turtle put; <code>turtle.reset()</code> wipes everything and sends it home.</li>
           </ul>
           <p class="callout"><strong>Tip:</strong> a big pattern draws fastest with <code>turtle.speed(0)</code> and <code>turtle.hideturtle()</code> at the top. Add them and the rainbow spiral snaps into place at once.</p>
-          <p>Now open the <a href="../../">Playground</a>, type <code>import turtle</code>, and draw something. Change a number in any example above and see what happens.</p>
-          <p><a href="../../" class="btn btn-primary">Open the Playground <svg class="btn-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h9M8 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a> <a href="../#sec-turtle" class="btn btn-ghost">Full call reference</a></p>
+          <p>Now open the <a href="">Playground</a>, type <code>import turtle</code>, and draw something. Change a number in any example above and see what happens.</p>
+          <p><a href="" class="btn btn-primary">Open the Playground <svg class="btn-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h9M8 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a> <a href="docs/#sec-turtle" class="btn btn-ghost">Full call reference</a></p>
         </section>
 
       </article>
@@ -186,16 +187,16 @@ turtle.forward(120)</pre>
     <div class="container">
       <p>PyWebLib: real Python in your browser, powered by
         <a href="https://pyodide.org" target="_blank" rel="noopener">Pyodide</a>. MIT licensed.
-        &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a></p>
+        &middot; <a href="privacy/">Privacy</a> &middot; <a href="terms/">Terms</a></p>
     </div>
   </footer>
 
-  <script src="../../theme.js"></script>
+  <script src="theme.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
-  <script src="../../supabase-config.js"></script>
-  <script src="../../auth.js"></script>
+  <script src="supabase-config.js"></script>
+  <script src="auth.js"></script>
   <!-- Carry a code example over to the Playground: stash it, then navigate. -->
   <script>
     (function () {
@@ -207,7 +208,7 @@ turtle.forward(120)</pre>
         try {
           localStorage.setItem("pyweblib-load", pre.textContent.replace(/\s+$/, ""));
         } catch (err) { /* private mode: just navigate */ }
-        location.href = "../../";
+        location.href = "";
       });
     })();
   </script>
