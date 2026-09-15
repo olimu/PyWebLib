@@ -184,7 +184,7 @@
     if (!sb) return;
     await sb.auth.signInWithOAuth({
       provider: "google",
-      options: { redirectTo: window.location.href }
+      options: { redirectTo: "https://olimu.github.io/PyWebLib/" }
     });
   }
 
@@ -233,7 +233,7 @@
     const res = await sb.auth.signUp({
       email: mail,
       password: password,
-      options: { emailRedirectTo: window.location.href }
+      options: { emailRedirectTo: "https://olimu.github.io/PyWebLib/" }
     });
     if (res.error) {
       const already = /already|registered|exists/i.test(res.error.message || "");
