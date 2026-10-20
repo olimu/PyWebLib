@@ -18,7 +18,7 @@
   // design, so it asks my_program_cap() for its OWN limit and falls back to the
   // ordinary one if that function is not installed yet.
   // See supabase-migration-caps.sql.
-  const DEFAULT_PROGRAM_CAP = 10;
+  const DEFAULT_PROGRAM_CAP = 200;
   let programCap = DEFAULT_PROGRAM_CAP;
 
   async function loadCap() {
