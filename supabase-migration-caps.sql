@@ -34,7 +34,7 @@ returns integer language sql stable security definer set search_path = public as
   select case
     when auth.uid() is null then 0
     when exists (select 1 from public.admins where user_id = auth.uid()) then 500
-    else 30
+    else 500
   end;
 $$;
 
