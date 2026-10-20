@@ -2014,9 +2014,9 @@ while game.playing():
     setEditing(bind || null);
   };
 
-  if (resetBtn) resetBtn.addEventListener("click", function () {
-    loadInto(DEFAULT_CODE, "Reset to the example");
-  });
+  // if (resetBtn) resetBtn.addEventListener("click", function () {
+  //   loadInto(DEFAULT_CODE, "Reset to the example");
+  // });
   if (clearBtn) clearBtn.addEventListener("click", function () { runner.clearOutput(); });
 
   // Maximise: blow the code editor up to fill the screen for distraction-free
