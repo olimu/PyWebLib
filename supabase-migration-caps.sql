@@ -1,7 +1,7 @@
 -- ===========================================================================
 -- PyWebLib migration: let the page know your real limits.
 --
--- The database has always enforced the caps correctly (10 programs / 30 assets,
+-- The database has always enforced the caps correctly (200 programs / 500 assets,
 -- 200 / 500 for admins). The PAGE did not: publish.js carried
 -- `const PROGRAM_CAP = 10` and had no way to learn any better, because
 -- public.admins deliberately has no grants, so the anon key cannot read it.
@@ -25,7 +25,7 @@ returns integer language sql stable security definer set search_path = public as
   select case
     when auth.uid() is null then 0
     when exists (select 1 from public.admins where user_id = auth.uid()) then 200
-    else 10
+    else 200
   end;
 $$;
 
@@ -46,12 +46,12 @@ grant execute on function public.my_asset_cap()   to authenticated;
 
 -- ---------------------------------------------------------------------------
 -- Check. Run while signed in as yourself in the app, or just confirm the
--- functions exist. Expect 200 / 500 for an admin, 10 / 30 for everyone else.
+-- functions exist. Expect 200 / 500 for an admin, 200 / 500 for everyone else.
 -- ---------------------------------------------------------------------------
 select u.email,
        (a.user_id is not null) as is_admin,
-       case when a.user_id is not null then 200 else 10 end as program_cap,
-       case when a.user_id is not null then 500 else  30 end as asset_cap,
+       case when a.user_id is not null then 200 else 200 end as program_cap,
+       case when a.user_id is not null then 500 else 500 end as asset_cap,
        (select count(*) from public.projects p where p.author_id = u.id) as programs
 from auth.users u
 left join public.admins a on a.user_id = u.id
