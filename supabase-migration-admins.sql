@@ -28,14 +28,14 @@ revoke all on public.admins from anon, authenticated;
 
 -- ---------------------------------------------------------------------------
 -- 2. The caps. Same triggers as before, but the number now depends on whether
---    the author is in admins. Everyone else is unchanged: 30 assets, 10
+--    the author is in admins. Everyone else is unchanged: 500 assets, 200
 --    programs.
 -- ---------------------------------------------------------------------------
 create or replace function public.enforce_asset_limit()
 returns trigger language plpgsql security definer set search_path = public as $$
 declare
   n   integer;
-  cap integer := 30;
+  cap integer := 500;
 begin
   if exists (select 1 from public.admins where user_id = new.author_id) then
     cap := 500;
@@ -53,7 +53,7 @@ create or replace function public.enforce_project_limit()
 returns trigger language plpgsql security definer set search_path = public as $$
 declare
   n   integer;
-  cap integer := 10;
+  cap integer := 200;
 begin
   if exists (select 1 from public.admins where user_id = new.author_id) then
     cap := 200;
