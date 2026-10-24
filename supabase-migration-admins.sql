@@ -41,10 +41,10 @@ begin
     cap := 500;
   end if;
   select count(*) into n from public.assets where author_id = new.author_id;
-  if n >= cap then
-    raise exception 'You have reached the limit of % assets. Delete one first.', cap
-      using errcode = 'check_violation';
-  end if;
+  -- if n >= cap then
+  --   raise exception 'You have reached the limit of % assets. Delete one first.', cap
+  --     using errcode = 'check_violation';
+  -- end if;
   return new;
 end;
 $$;
@@ -59,10 +59,10 @@ begin
     cap := 200;
   end if;
   select count(*) into n from public.projects where author_id = new.author_id;
-  if n >= cap then
-    raise exception 'You have reached the limit of % programs. Update or delete one first.', cap
-      using errcode = 'check_violation';
-  end if;
+  -- if n >= cap then
+  --   raise exception 'You have reached the limit of % programs. Update or delete one first.', cap
+  --     using errcode = 'check_violation';
+  -- end if;
   return new;
 end;
 $$;
